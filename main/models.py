@@ -12,7 +12,7 @@ class APIKeys(models.Model):
 
     id_APIKeys = models.AutoField(primary_key=True)
     id_Accounts = models.ForeignKey(Accounts, on_delete=models.CASCADE, to_field='id_Accounts')
-    key = models.CharField(max_length=500, blank=False, null=False)
+    base_key = models.CharField(max_length=500, blank=False, null=False)
     secret_key = models.CharField(max_length=500, blank=False, null=False)
 
 
